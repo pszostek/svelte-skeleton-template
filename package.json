@@ -9,7 +9,11 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
-		"format": "prettier --plugin-search-dir . --write ."
+		"format": "prettier --plugin-search-dir . --write .",
+		"predeploy": "firebase emulators:start",
+		"//comment1": "deploy-test requires an argument, e.g. npm run deploy-test -- channel-id",
+		"deploy-test": "firebase hosting:channel:deploy",
+		"deploy": "firebase deploy --only hosting"
 	},
 	"devDependencies": {
 		"@skeletonlabs/skeleton": "^0.92.2",
